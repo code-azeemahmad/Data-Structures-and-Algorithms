@@ -1,0 +1,21 @@
+________________________________________________________________________
+| Aspect                | Brute Force           | Optimal Approach     |
+| --------------------- | --------------------- | -------------------- |
+| Idea                  | Try all possibilities | Use patterns/logic   |
+| Time Complexity       | High (O(n²), O(n³)…)  | Low (O(n), O(log n)) |
+| Easy to implement?    | Yes (straightforward) | Sometimes tricky     |
+| Works for big inputs? | ❌ Too slow          | ✅ Efficient         |
+|_______________________|_______________________|______________________|
+
+
+Brute Force Approach:
+--> Definition: Try all possible solutions and pick the best one.
+--> Works fine for small inputs, but very slow for large ones.
+--> Often uses nested loops.
+
+
+
+Optimal Approach
+--> Use a smarter technique to solve the same problem with fewer computations.
+--> Uses mathematical reasoning, patterns, or algorithms to reduce work.
+--> Much faster, especially for large inputs.
