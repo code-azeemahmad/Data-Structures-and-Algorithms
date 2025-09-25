@@ -32,5 +32,7 @@ int main() {
     vector<int> nums3 = {-5, -2, -8, -1, -6};
     cout << "Max Subarray Sum (Example 3): " << maxSubArray(nums3) << endl;
 
+    // Time complexity for Kadane's Algorithm is O(n)
+    // Kadane's Algorithm is Dynamic Programming Problem
     return 0;
 }
