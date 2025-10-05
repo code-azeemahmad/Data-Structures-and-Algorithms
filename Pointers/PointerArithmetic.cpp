@@ -19,6 +19,12 @@ int main()
     cout << *(arr + 3) << endl;
     cout << *(arr + 4) << endl;
 
+    // pointer addition is not allowed
+    int *p1;
+    int *p2 = p1 + 2;
+    cout << p2 - p1 << endl;        // 2 = no. of blocks of type(int) --> 2 integars(4 bytes)
+
+    cout << (p2 > p1) << endl;        // pointers can be compared
     return 0;
 }
 
