@@ -27,3 +27,12 @@ int main()
 
     return 0;   
 }
+
+/*
+Use mnemonics or patterns
+
+Example:
+Bubble Sort → C.S.R.R. → "Compare, Swap, Repeat, Rise"
+Selection Sort → Select smallest → Swap
+Insertion Sort → Insert current → Shift left
+*/
