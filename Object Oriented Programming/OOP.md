@@ -31,5 +31,8 @@ Interviewers ask definitions with examples
 - So if you call a member function on an object, inside that function, this refers to that specific object’s memory.
 - this is a special pointer in C++ that points to the current object.
 - this->property is same as *(this).prop
-- 
+
+## Copy Constructor
+    Special Constructor (default) used to copy properties of one object into another.
+    that creates a new object as a copy of an existing object.
 
