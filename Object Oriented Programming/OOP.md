@@ -17,3 +17,11 @@ Interviewers ask definitions with examples
 # Encapsulation
 - is wrapping up of data and member functions in a single unit called class
 - hiding sensitive information using private
+
+## Constructor
+    Special method invoked automatically at time of object creation. Used for Initialisation.
+• Same name as class
+• Constructor doesn't have a return type
+• Only called once (automatically), at object creation
+• Memory allocation happens when constructor is called
+
