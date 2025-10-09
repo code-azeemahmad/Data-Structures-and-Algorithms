@@ -25,3 +25,11 @@ Interviewers ask definitions with examples
 • Only called once (automatically), at object creation
 • Memory allocation happens when constructor is called
 
+### this pointer
+    this is an implicit pointer that points to the current object which invoked the function.
+
+- So if you call a member function on an object, inside that function, this refers to that specific object’s memory.
+- this is a special pointer in C++ that points to the current object.
+- this->property is same as *(this).prop
+- 
+
