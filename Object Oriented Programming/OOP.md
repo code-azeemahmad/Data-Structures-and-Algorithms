@@ -36,3 +36,9 @@ Interviewers ask definitions with examples
     Special Constructor (default) used to copy properties of one object into another.
     that creates a new object as a copy of an existing object.
 
+###  Shallow Copy vs Deep Copy
+- A shallow copy of an object copies all of the member values from one object to another.  
+- Creates problem while dynamic memory allocation (heap)
+
+- A deep copy, on the other hand, not only copies the member values but also makes copies of any dynamically allocated memory that the members point to.
+
