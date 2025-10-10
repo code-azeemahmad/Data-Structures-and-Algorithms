@@ -32,7 +32,7 @@ public:
         {
             head = tail = newNode;
             return;
-        }
+        }                                  // TC = O(1)
         else
         {
             newNode->next = head; // *(newNode).next = head;
@@ -46,8 +46,8 @@ public:
         if (head == NULL)
         {
             head = tail = newNode;
-        }
-        else
+        }                                   // TC = O(1)
+        else                                
         {
             tail->next = newNode;
             tail = newNode;
@@ -61,7 +61,7 @@ public:
             cout << "LL is Empty!";
             return;
         }
-        else
+        else                                // TTC = O(1)
         {
             Node *temp = head;
             head = head->next;
@@ -84,7 +84,7 @@ public:
             return;
         }
         Node *temp = head;
-        while (temp->next != tail)
+        while (temp->next != tail)              // TC = O(n)
         {
             temp = temp->next;
         }
@@ -98,7 +98,7 @@ public:
     void printLL()
     {
         Node *temp = head;
-        while (temp != NULL)
+        while (temp != NULL)                    // O(n)
         {
             cout << temp->data << "   ";
             temp = temp->next;
