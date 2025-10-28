@@ -23,7 +23,7 @@ public:
         head = tail = NULL;
     }
 
-    void push(int val)
+    void push(int val)          // TC = O(1)
     {
         Node *newNode = new Node(val);
         if (isEmpty())
@@ -37,7 +37,7 @@ public:
         }
     }
 
-    void pop()
+    void pop()          // TC = O(1)
     {
         if (isEmpty())
         {
@@ -49,7 +49,7 @@ public:
         delete temp;
     }
 
-    int front()
+    int front()         // TC = O(1)
     {
         if (isEmpty())
         {
