@@ -44,6 +44,26 @@ Node *buildBST(vector<int> &arr)
     return root;
 }
 
+bool search(Node *root, int key)
+{
+    if (root == NULL)
+    {
+        return false;
+    }
+    else if (root -> data == key)
+    {
+        return true;
+    }
+    else if (key < root -> data)
+    {
+        search(root -> left, key);
+    }
+    else if (key > root -> data)
+    {
+        search(root -> right, key);
+    }
+}
+
 void inOrderTrav(Node *root)
 {
     if (root == NULL)
@@ -63,6 +83,8 @@ int main()
 
     // inOrderTrav(root);
     // cout << endl;
+
+    cout << search(root, 2) << endl;
 
     return 0;
 }
