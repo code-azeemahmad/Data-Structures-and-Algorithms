@@ -18,7 +18,7 @@ public:
 
 static int idx = -1;
 
-Node *buildTree(vector<int> preOrder)
+Node *buildTree(vector<int> &preOrder)
 {
     idx++;
     if (preOrder[idx] == -1)
