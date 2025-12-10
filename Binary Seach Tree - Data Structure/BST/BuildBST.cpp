@@ -64,6 +64,57 @@ bool search(Node *root, int key)
     }
 }
 
+Node *getInorderSuccessor(Node *root)   // leftmost node in right subtree
+{
+    while (root != NULL && root -> left != NULL)
+    {
+        root = root -> left;
+    }
+    return root;
+}
+
+Node *delNode(Node *root, int key)      // key = value to delete
+{
+    // zero child
+    if (root == NULL)   
+    {
+        return NULL;
+    }
+    if (key < root -> data)
+    {
+        root -> left = delNode(root -> left, key);
+    }
+    else if (key > root -> data)
+    {
+        root -> right = delNode(root -> right, key);
+    }
+    else    // key == root
+    {
+        // one child
+        if (root -> left == NULL)
+        {
+            Node *temp = root -> right;
+            delete root;
+            return temp;
+        }
+        else if (root -> right == NULL)
+        {
+            Node *temp = root -> left;
+            delete root;
+            return temp;
+        }
+        //  two children
+        else 
+        {
+            Node *IS = getInorderSuccessor(root -> right);
+            root -> data = IS -> data;
+            root -> right = delNode(root -> right, IS -> data);
+            return root;
+        }
+    }
+    return root;
+}
+
 void inOrderTrav(Node *root)
 {
     if (root == NULL)
@@ -81,10 +132,16 @@ int main()
 
     Node *root = buildBST(arr);
 
-    // inOrderTrav(root);
-    // cout << endl;
+    inOrderTrav(root);
+    cout << endl;
 
-    cout << search(root, 2) << endl;
+    // cout << search(root, 2) << endl;
+
+    delNode(root, 5);
+
+    inOrderTrav(root);
+    cout << endl;
+
 
     return 0;
 }
