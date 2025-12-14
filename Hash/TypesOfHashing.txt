@@ -1,0 +1,22 @@
+_________________________________________________________________
+| Hashing Type       | Technique         | Clustering           |
+|____________________|___________________|______________________|
+| **Open Hashing**   | Separate Chaining | No clustering        |
+|--------------------|-------------------|----------------------|
+| **Closed Hashing** | Linear Probing    | Primary clustering   |
+|                    | Quadratic Probing | Secondary clustering |
+|                    | Double Hashing    | Minimal              |
+|____________________|___________________|______________________|
+
+Clustering:
+Keys that collide tend to group together (form clusters) in the hash table,
+which increases search time.
+Instead of being evenly spread, elements pile up in certain regions.
+______________________________________________________________________________________________________________________________________________________________________________________________________________________
+| **Clustering Type**         | **Occurs In**                      | **Why It Happens**                                  | **Effect**                           | **Example Behavior**                               |
+| --------------------------- | ---------------------------------- | --------------------------------------------------- | ------------------------------------ | -------------------------------------------------- |
+| **Primary Clustering**      | Linear Probing (Closed Hashing)    | Consecutive filled slots attract more collisions    | Large contiguous blocks form         | Once a cluster forms, every new collision joins it |
+| **Secondary Clustering**    | Quadratic Probing (Closed Hashing) | Keys with same hash follow identical probe sequence | Smaller clusters than linear probing | Same initial hash → same probe path                |
+| **Minimal / No Clustering** | Double Hashing                     | Different step sizes from second hash function      | Best distribution                    | Keys spread more uniformly                         |
+| **No Clustering**           | Separate Chaining (Open Hashing)   | Collisions stored outside table                     | Performance stable                   | Multiple keys at same index via linked list        |
+|_____________________________|____________________________________|_____________________________________________________|______________________________________|____________________________________________________|
