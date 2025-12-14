@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void maxHeapify(int arr[], int n, int i)
+void maxHeapify(int arr[], int n, int i)    // TC = O(log n)
 {
     int largest = i;       // Initialize largest as root
     int left = 2 * i + 1;  // left = 2*i + 1
@@ -34,7 +34,7 @@ int main()
 
     int lastLeafNode = (n / 2) - 1;
 
-    for (int i = lastLeafNode; i >= 0; i--)
+    for (int i = lastLeafNode; i >= 0; i--)     // Tc = O(n)
     {
         maxHeapify(arr, n, i);
     }
