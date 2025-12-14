@@ -3,7 +3,7 @@
 #include <cmath>
 using namespace std;
 
-void insertHeap(vector<int> &arr, int key)
+void insertHeap(vector<int> &arr, int key)  // TC = O(log n)
 {
     // Step 1: Insert key at end
     arr.push_back(key);
@@ -41,3 +41,11 @@ int main()
 
     return 0;
 }
+
+// _____________________________________________________________________________________________________________________________________
+// | Term           | Meaning                                                                | Time Complexity                         |
+// | -------------- | ---------------------------------------------------------------------- | --------------------------------------- |
+// | `maxHeapify`   | Fixes heap property for **one node and its subtree**                   | **O(log n)** worst-case, O(1) best-case |
+// | Build Max Heap | Uses `maxHeapify` repeatedly on **all non-leaf nodes** to build a heap | **O(n)**                                |
+// | Heap Sort      | Uses `maxHeapify` both for building heap **and** for extracting max    | **O(n log n)**                          |
+// |________________|________________________________________________________________________|_________________________________________|
