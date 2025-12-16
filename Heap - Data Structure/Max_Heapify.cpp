@@ -32,9 +32,9 @@ int main()
     int arr[7] = {15, 5, 20, 1, 17, 10, 30};
     int n = sizeof(arr) / sizeof(arr[0]);
 
-    int lastLeafNode = (n / 2) - 1;
+    int lastNONLeafNode = (n / 2) - 1;
 
-    for (int i = lastLeafNode; i >= 0; i--)     // Tc = O(n)
+    for (int i = lastNONLeafNode; i >= 0; i--)     // Tc = O(n)
     {
         maxHeapify(arr, n, i);
     }
